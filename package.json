@@ -1,10 +1,11 @@
 {
   "name": "accademymanager",
-  "version": "0.0.1",
   "description": "A bot for Animus eSports Accademy",
+  "version": "0.0.1",
   "main": "bot.js",
-  "author": "SouL",
-  "license": "ISC",
+  "scripts": {
+    "start" : "node bot.js"
+  },
   "dependencies": {
     "discord.js": "^11.2.1",
     "fs": "0.0.1-security",
