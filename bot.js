@@ -5,13 +5,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-bot.on("ready", () => {
-  console.log('Sono pronto per essere utilizzato!')
-});
+client.on("message", (message) => {
 
-bot.on("message", (message) => {
-
-  const prefix = botsettings.prefix
+  const prefix = "!";
 
   if (message.content === prefix + 'silver') {
     message.delete();
@@ -43,7 +39,8 @@ bot.on("message", (message) => {
     message.author.sendFile("https://imgur.com/ZtZ58ko");
   }
 
-bot.user.setGame("Animus eSports");
+client.user.setGame("Animus eSports");
+client.user.setStatus("Online");
 });
 
 // THIS  MUST  BE  THIS  WAY
