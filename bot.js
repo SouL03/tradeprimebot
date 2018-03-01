@@ -7,7 +7,7 @@ bot.on("ready", () => {
 
 bot.on("message", (message) => {
 
-  const prefix = botsettings.prefix
+  const prefix = "!";
 
   if (message.content === prefix + 'silver') {
     message.delete();
