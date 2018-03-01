@@ -39,7 +39,7 @@ client.on("message", (message) => {
   if (message.content === prefix + 'champion') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Champion Accademy');
-    message.author.sendFile("https://github.com/SouL03/AnimusBot/blob/master/Champion-Accademy.png?raw=true");
+    message.author.sendFile("./Champion-Accademy.png");
   }
     
   if (message.content === prefix + 'gc') {
