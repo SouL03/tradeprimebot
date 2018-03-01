@@ -4,6 +4,10 @@ const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
+    
+    client.user.setGame("Animus eSports");
+    client.user.setStatus("Online");
+    
 });
 
 client.on("message", (message) => {
@@ -38,8 +42,6 @@ client.on("message", (message) => {
     message.author.sendFile("https://imgur.com/ZtZ58ko");
   }
 
-client.user.setGame("Animus eSports");
-client.user.setStatus("Online");
 });
 
 // THIS  MUST  BE  THIS  WAY
