@@ -4,9 +4,8 @@ const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-    
-    client.user.setGame("Animus eSports");
-    client.user.setStatus("Online");
+    client.user.setGame('Animus eSports');
+    client.user.setStatus('Online');
     
 });
 
