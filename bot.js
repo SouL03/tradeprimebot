@@ -9,8 +9,6 @@ client.on('ready', () => {
 });
 
 client.on("message", (message) => {
-    
-       client.user.setGame('Animus eSports');
 
   if (message.content === prefix + 'silver') {
     message.delete();
@@ -49,6 +47,8 @@ client.on("message", (message) => {
   }
 
 });
+
+client.user.setGame('Animus eSports');
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
