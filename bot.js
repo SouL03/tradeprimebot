@@ -4,12 +4,13 @@ const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setGame('Animus eSports');
-    client.user.setStatus('Online');
+
     
 });
 
 client.on("message", (message) => {
+    
+       client.setGame('Animus eSports');
 
   if (message.content === prefix + 'silver') {
     message.delete();
