@@ -10,7 +10,7 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
     
-       client.setGame('Animus eSports');
+       client.user.setGame('Animus eSports');
 
   if (message.content === prefix + 'silver') {
     message.delete();
