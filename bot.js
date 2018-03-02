@@ -4,8 +4,7 @@ const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-
-    
+    client.user.setGame('Animus eSports');
 });
 
 client.on("message", (message) => {
@@ -47,8 +46,6 @@ client.on("message", (message) => {
   }
 
 });
-
-client.user.setGame('Animus eSports');
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
