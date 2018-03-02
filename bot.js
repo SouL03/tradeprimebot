@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const bot = new Discord.Client();
 const prefix = "!";
 
 client.on("ready", () => {
     console.log("I am ready!");
-    bot.user.setGame("Animus eSports");
+    client.user.setGame("Animus eSports");
 });
 
 client.on("message", (message) => {
@@ -45,7 +44,6 @@ client.on("message", (message) => {
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della GrandChampion Accademy');
     message.author.sendFile("./GrandChampion-Accademy.png");
   }
-  client.user.setGame("Animus eSports");
 
 });
 
