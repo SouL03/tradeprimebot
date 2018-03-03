@@ -7,7 +7,11 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
+
+//Bot Custom Commands
 client.on("message", (message) => {
+    
+  //Accademy Commands
 
   if (message.content === prefix + 'silver') {
     message.delete();
@@ -43,6 +47,13 @@ client.on("message", (message) => {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della GrandChampion Accademy');
     message.author.sendFile("./GrandChampion-Accademy.png");
+  }
+    
+  //Help Command
+    
+  if (message.content === prefix + 'help') {
+    message.delete(30000);
+    message.reply('Lista dei comandi del **Bot** degli Animus eSports:'); 
   }
 
 });
