@@ -53,7 +53,9 @@ client.on("message", (message) => {
     
   if (message.content === prefix + 'help') {
     message.delete(30000);
-    message.channel.sendMessage('Lista dei comandi del **Bot** degli Animus eSports:'); 
+    message.channel.sendMessage('Lista dei comandi supportati:
+                           EZ  
+                                '); 
   }
 
 });
