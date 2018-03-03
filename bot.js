@@ -4,7 +4,7 @@ const prefix = "!";
 
 client.on("ready", () => {
     console.log("I am ready!");
-    client.user.setGame("Animus eSports");
+    client.setPlayingGame("Animus eSports");
 });
 
 
@@ -63,7 +63,7 @@ client.on("message", (message) => {
         description: "La lista dei comandi supportati del bot Animus eSports",
         fields: [{
             name: "Comandi Accademie",
-            value: "Io\'Posso"
+            value: "Io\ Posso"
           },
         ],
       }
