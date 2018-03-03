@@ -67,6 +67,7 @@ client.on("message", (message) => {
           },
         ],
       }
+    client.deleteMessage(message);
 });
   }
 
