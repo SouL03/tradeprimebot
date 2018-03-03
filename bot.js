@@ -63,7 +63,7 @@ client.on("message", (message) => {
         description: "La lista dei comandi supportati del bot Animus eSports",
         fields: [{
             name: "Comandi Accademie",
-            value: "__!silver__ = Immagine della **Silver Accademy\n__!gold__ = Immagine della **Gold Accademy"
+            value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della **Gold Accademy**"
           },
         ],
       }
