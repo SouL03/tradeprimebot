@@ -59,11 +59,11 @@ client.on("message", (message) => {
           name: client.user.username,
           icon_url: client.user.avatarURL
         },
-        title: "Comandi Supportati",
+        title: "**Comandi Supportati**",
         description: "La lista dei comandi supportati del bot Animus eSports",
         fields: [{
             name: "Comandi Accademie",
-            value: "Io\Posso"
+            value: "Io/Posso"
           },
         ],
       }
