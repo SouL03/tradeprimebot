@@ -53,9 +53,21 @@ client.on("message", (message) => {
     
   if (message.content === prefix + 'help') {
     message.delete(30000);
-    message.channel.sendMessage('Lista dei comandi supportati:
-                           EZ  
-                                '); 
+    message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+        },
+        title: "Comandi Supportati",
+        description: "La lista dei comandi supportati del bot Animus eSports",
+        fields: [{
+            name: "Comandi Accademie",
+            value: "Io\Posso"
+          },
+        ],
+      }
+});
   }
 
 });
