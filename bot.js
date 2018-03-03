@@ -4,7 +4,7 @@ const prefix = "!";
 
 client.on("ready", () => {
     console.log("I am ready!");
-    client.setPlayingGame("Animus eSports");
+    client.setStatus('online', 'Call of Duty: Black Ops 10');
 });
 
 
