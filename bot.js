@@ -63,7 +63,7 @@ client.on("message", (message) => {
         description: "La lista dei comandi supportati del bot Animus eSports",
         fields: [{
             name: "Comandi Accademie",
-            value: "Io\ Posso"
+            value: "Io\n Posso"
           },
         ],
       }
