@@ -9,7 +9,7 @@ client.on("ready", () => {
 
 
 //Bot Custom Commands
-client.on("message", (message) => {
+client.on("message", function (message) => {
     
   //Accademy Commands
 
@@ -67,7 +67,7 @@ client.on("message", (message) => {
           },
         ],
       }
-    client.deleteMessage();
+    client.deleteMessage(message);
 });
   }
 
