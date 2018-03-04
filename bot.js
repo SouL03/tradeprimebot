@@ -7,18 +7,21 @@ client.on("ready", () => {
     client.user.setStatus('online', 'Call of Duty: Black Ops 10');
 });
 
-client.on('message', function(message) {
-    if (message.content == "^clear") {
-        try {
-            if (message.member.hasPermission("MANAGE_MESSAGES")) {
-                messages = message.channel.fetchMessages();
-                message.channel.bulkDelete(messages);
-            }
-        } catch(e) {
-            message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
-            console.log(e);
-        }
-    }
+      if (message.channel.type == 'text') {
+        message.channel.fetchMessages()
+          .then(messages => {
+            message.channel.bulkDelete(messages);
+            messagesDeleted = messages.array().length; // number of messages deleted
+
+            // Logging the number of messages deleted on both the channel and console.
+            message.channel.sendMessage("Deletion of messages successful. Total messages deleted: "+messagesDeleted);
+            console.log('Deletion of messages successful. Total messages deleted: '+messagesDeleted)
+          })
+          .catch(err => {
+            console.log('Error while doing Bulk Delete');
+            console.log(err);
+          });
+      }
 
 });
 
