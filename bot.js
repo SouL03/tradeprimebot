@@ -7,12 +7,15 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
-client.on('message', messaage => {
-    if(message.content.startsWith("!cosa")) {
-     message.delete(1000);
-     message.channel.send(message.content.slice{5, message.content.length});
-    }
-})
+exports.run = (client, message, args, tools) => {
+    if (isNaN(args[0])) return message.channel.send('**Indica un numero valido di messaggi da cancellare');
+    if (isNaN(args[0] > 100)) return message.channel.send('**Indica un numero inferiore a 100 per cancellare dei messaggi');
+    
+    message.channel.bulkDelete(args[0])
+      .then( message => message.channel.send('**Hai eliminato \'${messages.size}/${args[0]}\' messaggi**').then( msg => msg.delete({ timeout: 10000 })))
+      .catch( error => message.channel.send('**ERRORE: ${error.message}'));
+                                                                                        
+}
 
 });
 
