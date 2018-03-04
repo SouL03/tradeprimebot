@@ -56,7 +56,7 @@ client.on("message", (message) => {
     
   //Help Command
     
-  if (message.content === prefix + 'help') {
+  if (message.content === prefix + 'aiuto') {
     message.delete(30000);
     message.channel.send({embed: {
         color: 3447003,
