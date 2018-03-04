@@ -27,7 +27,7 @@ client.on("message", (message) => {
         return;
       }
 
-});
+    }
     
   if (message.content === prefix + 'silver') {
     message.delete();
