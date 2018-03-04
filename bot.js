@@ -20,7 +20,7 @@ client.on("message", (message) => {
     
   if (msg.startsWith(prefix + 'delete')) {
       
-      async function delete() {
+      async function purge() {
         message.delete();
           
         if (!message.member.roles.find("name","Soul")) {
