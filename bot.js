@@ -80,7 +80,7 @@ client.on("message", (message) => {
           },
         ],
       }
-    return;
+    return
 });
   }
 
