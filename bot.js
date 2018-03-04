@@ -7,16 +7,6 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
-exports.run = (client, message, args, tools) => {
-    if (isNaN(args[0])) return message.channel.send('**Indica un numero valido di messaggi da cancellare');
-    if (isNaN(args[0] > 100)) return message.channel.send('**Indica un numero inferiore a 100 per cancellare dei messaggi');
-    
-    message.channel.bulkDelete(args[0])
-      .then( message => message.channel.send('**Hai eliminato \'${messages.size}/${args[0]}\' messaggi**').then( msg => msg.delete({ timeout: 10000 })))
-      .catch( error => message.channel.send('**ERRORE: ${error.message}'));
-                                                                                        
-}
-
 //Bot Custom Commands
 client.on("message", (message) => {
     
@@ -74,7 +64,7 @@ client.on("message", (message) => {
         description: "La lista dei comandi supportati del bot Animus eSports",
         fields: [{
             name: "Comandi Accademie",
-            value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della **Gold Accademy**"
+            value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della *Gold Accademy\n__!platinum__ = Immagine della **Platinum Accademy**\n__!diamond__ = Immagine della **Diamond Accademy\n__!champion__ = Immagine della **Champion Accademy\n__!gc__ = Immagine della **GrandChampion Accademy"
           },
         ],
       }
