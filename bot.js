@@ -62,6 +62,12 @@ client.on("message", (message) => {
     message.author.sendFile("./GrandChampion-Accademy.png");
   }
     
+  //Who command
+  
+  if (message.content === prefix + 'who') {
+   message.channel.send('L\'Animus eSports è un clan di Rocket League, questo è il server discord. Qui si puo\' diventare mebri di questo gruppo, conoscere nuovi giocatori, creare squadre etc... il nostro clan organizza tornei, sempre di Rocket League, dove si consolideranno i rapporti tra i vari team, e tra noi membri del clan. Animus eSports ha anche un canale youtube dove caricheremo soprattutto montaggi, con i migliori goal dei membri di questo gruppo:  https://www.youtube.com/channel/UCzj_OqA5BIlXeX1thOtQmGA?view_as=subscriber').then(msg => msg.delete(3000));   
+  }
+    
   //Help Command
     
   if (message.content === prefix + 'help') {
@@ -79,7 +85,7 @@ client.on("message", (message) => {
             value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della **Gold Accademy**\n__!platinum__ = Immagine della **Platinum Accademy**\n__!diamond__ = Immagine della **Diamond Accademy**\n__!champion__ = Immagine della **Champion Accademy**\n__!gc__ = Immagine della **GrandChampion Accademy**"
           },
         ],
-      }.then(message => messagge.delete(3000))
+    }
 });
   }
 
