@@ -64,10 +64,14 @@ client.on("message", (message) => {
     
   //Who command
   
-  if (message.content === prefix + 'who') {
-   message.channel.send('L\'Animus eSports è un clan di Rocket League, questo è il server discord. Qui si puo\' diventare mebri di questo gruppo, conoscere nuovi giocatori, creare squadre etc... il nostro clan organizza tornei, sempre di Rocket League, dove si consolideranno i rapporti tra i vari team, e tra noi membri del clan. Animus eSports ha anche un canale youtube dove caricheremo soprattutto montaggi, con i migliori goal dei membri di questo gruppo:  https://www.youtube.com/channel/UCzj_OqA5BIlXeX1thOtQmGA?view_as=subscriber').then(msg => msg.delete(3000));   
+  if (message.content === prefix + 'am') {
+   message.delete(7000);
+   message.channel.send('L\'Animus eSports è un clan di Rocket League, questo è il server discord. Qui si puo\' diventare mebri di questo gruppo, conoscere nuovi giocatori, creare squadre etc... il nostro clan organizza tornei, sempre di Rocket League, dove si consolideranno i rapporti tra i vari team, e tra noi membri del clan. Animus eSports ha anche un canale youtube dove caricheremo soprattutto montaggi, con i migliori goal dei membri di questo gruppo:  https://www.youtube.com/channel/UCzj_OqA5BIlXeX1thOtQmGA?view_as=subscriber').then(msg => msg.delete(120000));   
   }
     
+  if (message.content === prefix + 'sc')
+   message.delete(5000);
+   message.channel.send('Siamo arrivati a ' + client.users.length + 'membri totali del server.')    
   //Help Command
     
   if (message.content === prefix + 'help') {
