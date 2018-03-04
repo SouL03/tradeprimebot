@@ -76,7 +76,7 @@ client.on("message", (message) => {
           }
         ],
     }
-}).then(msg => msg.delete(5000));
+}).then(msg => msg.delete(120000));
   }
   
 
