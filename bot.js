@@ -19,9 +19,6 @@ exports.run = (client, message, args, tools) => {
 
 //Bot Custom Commands
 client.on("message", (message) => {
-
-
-  //Clear Command
     
 
     
