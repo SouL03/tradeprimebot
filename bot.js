@@ -11,6 +11,36 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
+  let msg = message.content.toUpperCase();
+  let sender = message.author;
+  let cont = message.content.slice(prefix.length).split(" ");
+  let args = cont.slice(1);
+    
+  //Clear Command
+    
+  if (msg.startsWith(prefix + 'delete')) {
+      
+      async function delete() {
+        message.delete();
+          
+        if (!message.member.roles.find("name","Soul")) {
+            message.channel.send('Ti serve il ruolo **Soul** per usare questo comando');
+            return;
+        }
+          
+        if (isNaN(args[0])) {
+            message.channel.send('Per favore usa un numero per i tuoi args. \n Usa: ' + prefix + 'delete <quantità messaggi>');
+            return;
+        }
+        
+        const fetched = await message.channel.fetchMessages({limit: args[0]});
+        console.log(fetched.size + 'messaggi trovati, cancellando...');
+          
+        message.channel.bulkDelete(fetched)
+            .catch(error => message.channel.send('Errore: $(error)'));
+      }
+     }
+    
   //Accademy Commands
 
   if (message.content === prefix + 'silver') {
