@@ -7,6 +7,21 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
+client.on('message', function(message) {
+    if (message.content == prefix + "clear") {
+        try {
+            if (message.member.hasPermission("MANAGE_MESSAGES")) {
+                messages = message.channel.fetchMessages();
+                message.channel.bulkDelete(messages);
+            }
+        } catch(e) {
+            message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
+            console.log(e);
+        }
+    }
+
+});
+
 //Bot Custom Commands
 client.on("message", (message) => {    
   //Accademy Commands
@@ -64,7 +79,7 @@ client.on("message", (message) => {
             value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della **Gold Accademy**\n__!platinum__ = Immagine della **Platinum Accademy**\n__!diamond__ = Immagine della **Diamond Accademy**\n__!champion__ = Immagine della **Champion Accademy**\n__!gc__ = Immagine della **GrandChampion Accademy**"
           },
         ],
-      }.then message.delete(1000);
+      }
 });
   }
 
