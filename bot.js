@@ -7,6 +7,10 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
+//Bot Custom Commands
+client.on("message", (message) => {    
+  //Accademy Commands
+
     if (message.content == CLEAR_MESSAGES) {
 
       // Check the following permissions before deleting messages:
@@ -24,11 +28,7 @@ client.on("ready", () => {
       }
 
 });
-
-//Bot Custom Commands
-client.on("message", (message) => {    
-  //Accademy Commands
-
+    
   if (message.content === prefix + 'silver') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
