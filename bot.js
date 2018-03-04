@@ -71,7 +71,6 @@ client.on("message", (message) => {
     
   if (message.content === prefix + 'sc')
    message.delete(5000);
-   message.channel.send('Siamo arrivati a ' + client.users.length + 'membri totali del server.')    
   //Help Command
     
   if (message.content === prefix + 'help') {
