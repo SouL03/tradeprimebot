@@ -73,7 +73,7 @@ client.on("message", (message) => {
                  {
             name: "Comando AM",
             value: "__!am__ = Descrizione degli **Animus eSports**"
-          };
+          }
         ],
     }
 }).then(msg => msg.delete(5000));
