@@ -8,10 +8,7 @@ client.on("ready", () => {
 });
 
 //Bot Custom Commands
-client.on("message", (message) => {
-    
-
-    
+client.on("message", (message) => {    
   //Accademy Commands
 
   if (message.content === prefix + 'silver') {
@@ -64,7 +61,7 @@ client.on("message", (message) => {
         description: "La lista dei comandi supportati del bot Animus eSports",
         fields: [{
             name: "Comandi Accademie",
-            value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della *Gold Accademy\n__!platinum__ = Immagine della **Platinum Accademy**\n__!diamond__ = Immagine della **Diamond Accademy\n__!champion__ = Immagine della **Champion Accademy\n__!gc__ = Immagine della **GrandChampion Accademy"
+            value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della **Gold Accademy**\n__!platinum__ = Immagine della **Platinum Accademy**\n__!diamond__ = Immagine della **Diamond Accademy**\n__!champion__ = Immagine della **Champion Accademy**\n__!gc__ = Immagine della **GrandChampion Accademy**"
           },
         ],
       }
