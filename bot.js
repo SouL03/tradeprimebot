@@ -65,6 +65,7 @@ client.on("message", (message) => {
           },
         ],
       }
+    message.delete();
 });
   }
 
