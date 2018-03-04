@@ -11,7 +11,7 @@ client.on("ready", () => {
 client.on("message", (message) => {    
   //Accademy Commands
 
-    if (message.content == CLEAR_MESSAGES) {
+    if (message.content === prefix + "clearall") {
 
       // Check the following permissions before deleting messages:
       //    1. Check if the user has enough permissions
