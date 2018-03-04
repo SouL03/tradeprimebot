@@ -8,11 +8,6 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
-client.on('guildMemberAdd', member => {
-       member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
-       console.log(`${member.user.username} has joined`);
-});
-
 //Bot Custom Commands
 client.on("message", (message) => {    
   //Accademy Commands
