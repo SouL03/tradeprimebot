@@ -10,24 +10,6 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {    
   //Accademy Commands
-
-    if (message.content === prefix + "clearall") {
-
-      // Check the following permissions before deleting messages:
-      //    1. Check if the user has enough permissions
-      //    2. Check if I have the permission to execute the command
-
-      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
-        console.log("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
-        return;
-      } else if (!message.channel.permissionsFor(client.user).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
-        console.log("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
-        return;
-      }
-
-    }
     
   if (message.content === prefix + 'silver') {
     message.delete();
@@ -72,8 +54,6 @@ client.on("message", (message) => {
    message.channel.send('L\'Animus eSports è un clan di Rocket League, questo è il server discord. Qui si puo\' diventare mebri di questo gruppo, conoscere nuovi giocatori, creare squadre etc... il nostro clan organizza tornei, sempre di Rocket League, dove si consolideranno i rapporti tra i vari team, e tra noi membri del clan. Animus eSports ha anche un canale youtube dove caricheremo soprattutto montaggi, con i migliori goal dei membri di questo gruppo:  https://www.youtube.com/channel/UCzj_OqA5BIlXeX1thOtQmGA?view_as=subscriber').then(msg => msg.delete(120000));   
   }
     
-  if (message.content === prefix + 'sc')
-   message.delete(5000);
   //Help Command
     
   if (message.content === prefix + 'help') {
