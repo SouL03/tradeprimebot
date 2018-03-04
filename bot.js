@@ -7,18 +7,21 @@ client.on("ready", () => {
     client.user.setGame("Animus eSports");
 });
 
-client.on('message', function(message) {
-    if (message.content == prefix + "clear") {
-        try {
-            if (message.member.hasPermission("MANAGE_MESSAGES")) {
-                messages = message.channel.fetchMessages();
-                message.channel.bulkDelete(messages);
-            }
-        } catch(e) {
-            message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
-            console.log(e);
-        }
-    }
+    if (message.content == CLEAR_MESSAGES) {
+
+      // Check the following permissions before deleting messages:
+      //    1. Check if the user has enough permissions
+      //    2. Check if I have the permission to execute the command
+
+      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
+        console.log("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
+        return;
+      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
+        console.log("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
+        return;
+      }
 
 });
 
