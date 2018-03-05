@@ -24,7 +24,7 @@ client.on("message", (message) => {
         fields: [{
             name: "ANIMUS ESPORTS | BEST GOALS AND SAVES | MONTAGE",
             url: "https://www.youtube.com/watch?v=G3UKuMZazOg",
-            value: ""
+            value: "Eh volevi"
           },
                  {
             name: "Comando AM",
