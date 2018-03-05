@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "!";
-const joinmessage = require('./joinmessages');
 
 client.on("ready", () => {
     console.log("I am ready!");
@@ -82,10 +81,10 @@ client.on("message", (message) => {
             value: "__!am__ = Descrizione degli **Animus eSports**"
           }
         ],
-    }
-  }).then(msg => msg.delete(120000));
+      }
+    }).then(msg => msg.delete(120000));
   
- });
+ }
 
 
 
