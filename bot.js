@@ -97,6 +97,10 @@ client.on("message", (message) => {
                  {
             name: "Comando AM",
             value: "__!am__ = Descrizione degli **Animus eSports**"
+          },
+                 {
+            name: "Comando MONTAGES",
+            value: "__!montages__ = Lista dei Montages degli **Animus eSports**"
           }
         ],
       }
