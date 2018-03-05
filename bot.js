@@ -12,27 +12,7 @@ client.on("ready", () => {
 client.on("message", (message) => {    
   
   //Montage Command
-  if (message.content === prefix + 'montages') {
-    message.delete(10000);
-    message.channel.send({embed: {
-        color: 3447003,
-        author: {
-          name: client.user.username,
-          icon_url: client.user.avatarURL
-        },
-        title: "Animus eSports Montages",
-        description: "Lista dei Montages pubblicati sul canale Youtube",
-        fields: [{
-            name: "Comandi Accademie",
-            value: "__!silver__ = Immagine della **Silver Accademy**\n__!gold__ = Immagine della **Gold Accademy**\n__!platinum__ = Immagine della **Platinum Accademy**\n__!diamond__ = Immagine della **Diamond Accademy**\n__!champion__ = Immagine della **Champion Accademy**\n__!gc__ = Immagine della **GrandChampion Accademy**"
-        },
-                 {
-            name: "Comando AM",
-            value: "__!am__ = Descrizione degli **Animus eSports**"
-          }
-        ],
-      }
-    }).then(msg => msg.delete(120000));
+
     
     
     
@@ -105,7 +85,7 @@ client.on("message", (message) => {
     }
   }).then(msg => msg.delete(120000));
   
-  
+ });
 
 
 
