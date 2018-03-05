@@ -31,8 +31,8 @@ client.on("message", (message) => {
             value: "__!am__ = Descrizione degli **Animus eSports**"
           }
         ],
-    }
-}).then(msg => msg.delete(120000));
+      }
+    }).then(msg => msg.delete(120000));
     
     
     
