@@ -10,6 +10,15 @@ client.on("ready", () => {
 
 //Bot Custom Commands
 client.on("message", (message) => {    
+  
+  //Montage Command
+  if (message.content === prefix + 'montages') {
+   message.delete(7000);
+   message.channel.send('**Animus eSports Montages**\nANIMUS ESPORTS | BEST GOALS AND SAVES | MONTAGE\nhttps://www.youtube.com/watch?v=G3UKuMZazOg - Edited by NanoMalefico ');
+  }
+    
+    
+    
   //Accademy Commands
     
   if (message.content === prefix + 'silver') {
