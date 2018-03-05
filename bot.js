@@ -11,7 +11,30 @@ client.on("ready", () => {
 client.on("message", (message) => {    
   
   //Montage Command
-
+  if (message.content === prefix + 'montages') {
+    message.delete(10000);
+    message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+        },
+        title: "Animus eSports Montages",
+        description: "La lista dei montages caricati sul canale YouTube",
+        fields: [{
+            name: "ANIMUS ESPORTS | BEST GOALS AND SAVES | MONTAGE",
+            url: "https://www.youtube.com/watch?v=G3UKuMZazOg",
+            value: ""
+          },
+                 {
+            name: "Comando AM",
+            value: "__!am__ = Descrizione degli **Animus eSports**"
+          }
+        ],
+      }
+    }).then(msg => msg.delete(120000));
+  
+  }
     
     
     
