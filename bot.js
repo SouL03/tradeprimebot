@@ -23,7 +23,7 @@ client.on("message", (message) => {
         description: "La lista dei montages caricati sul canale YouTube",
         fields: [{
             name: "ANIMUS ESPORTS | BEST GOALS AND SAVES | MONTAGE",
-            value: "https://www.youtube.com/watch?v=G3UKuMZazOg - Edited by NanoMalefico"
+            value: "https://www.youtube.com/playlist?list=PLxfysA9PEn_vBykbYZm6f5vFLFTHKidMP - Animus eSports YouTube Playlist"
           }
         ],
       }
