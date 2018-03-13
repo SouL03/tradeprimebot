@@ -7,6 +7,8 @@ client.on("ready", () => {
     client.user.setGame("AmazingPlays");
 });
 
+
+
 //Bot Custom Commands
 client.on("message", (message) => {    
   
