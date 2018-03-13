@@ -23,7 +23,7 @@ client.on("message", (message) => {
           icon_url: client.user.avatarURL
         },
         title: "AmazingPlays Gaming - Giochi",
-        description: "La lista dei giochi supportati sul nostro server discord",
+        description: "La lista dei giochi disponibili sul nostro server discord",
         fields: [{
             name: "Giochi",
             value: "- **Dead by Daylight**\n- **Rocket League**\n- **Deceit**\n- **PUBG**\n- **Fornite**"
