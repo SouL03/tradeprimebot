@@ -26,7 +26,7 @@ client.on("message", (message) => {
         description: "La lista dei giochi supportati sul nostro server discord",
         fields: [{
             name: "Giochi",
-            value: "- **Dead by Daylight**\- **Rocket League**\- **Deceit**\- **PUBG**\- **Fornite**"
+            value: "- **Dead by Daylight**\n- **Rocket League**\n- **Deceit**\n- **PUBG**\n- **Fornite**"
           }
         ],
       }
