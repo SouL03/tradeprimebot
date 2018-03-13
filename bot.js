@@ -5,7 +5,7 @@ const prefix = "!";
 client.on("ready", () => {
     console.log("I am ready!");
     client.user.setGame("AmazingPlays");
-    client.user.setPresence({ game: { name: 'AmazingPlays ⏳', type: 0 } });
+    client.user.setPresence({ game: { name: 'AmazingPlays Gaming ⏳', type: 0 } });
 });
 
 
