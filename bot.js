@@ -16,7 +16,7 @@ client.on("message", (message) => {
     
   let deleteStuff = () => {
     let count = 0;
-    msg.channel.fetchMessages({limit: 100})
+    message.channel.fetchMessages({limit: 100})
      .then(messages => {
        let messagesArr = messages.array();
        let messageCount = messagesArr.length;
