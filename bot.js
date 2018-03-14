@@ -47,9 +47,6 @@ client.on("message", (message) => {
             console.log(err);
           });
       }
-    }
-  });
-});
   
   //Montage Command
   if (message.content === prefix + 'giochi') {
