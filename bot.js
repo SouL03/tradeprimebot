@@ -21,11 +21,11 @@ client.on("message", (message) => {
       //    2. Check if I have the permission to execute the command
 
       if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
+        message.channel.sendMessage("Non hai il permesso per eseguire questo comando \""+message.content+"\"");
         console.log("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
         return;
       } else if (!message.channel.permissionsFor(client.user).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
+        message.channel.sendMessage("Non ho il permesso di eseguire questo comando \""+message.content+"\"");
         console.log("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
         return;
       }
@@ -39,48 +39,16 @@ client.on("message", (message) => {
             messagesDeleted = messages.array().length; // number of messages deleted
 
             // Logging the number of messages deleted on both the channel and console.
-            message.channel.sendMessage("Deletion of messages successful. Total messages deleted: "+messagesDeleted);
-            console.log('Deletion of messages successful. Total messages deleted: '+messagesDeleted)
+            message.channel.sendMessage("Messaggi cancellati con successo. Messaggi cancellati: "+messagesDeleted).then(msg => msg.delete(60000));
+            console.log('Messaggi cancellati con successo. Messaggi cancellati: '+messagesDeleted)
           })
           .catch(err => {
-            console.log('Error while doing Bulk Delete');
+            console.log('Errore nel facendo Bulk Delete');
             console.log(err);
           });
       }
     }
     
-  let deleteStuff = () => {
-    let count = 0;
-    message.channel.fetchMessages({limit: 20})
-     .then(messages => {
-       let messagesArr = messages.array();
-       let messageCount = messagesArr.length;
-
-       for(let i = 0; i < messageCount; i++) {
-         messagesArr[i].delete()
-          .then(function() {
-            count = count + 1;
-            if(count >= 20) {
-              deleteStuff();
-            }
-          })
-          .catch(function() {
-            count = count + 1;
-            if(count >= 20) {
-              deleteStuff();
-            }
-          })
-       }
-     })
-     .catch(function(err) {
-       console.log('error thrown');
-       console.log(err);
-     });
-  };
-  
-  if(message.content === '!cleanse') {
-    deleteStuff();
-  }
   
   //Montage Command
   if (message.content === prefix + 'giochi') {
