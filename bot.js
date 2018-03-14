@@ -39,7 +39,7 @@ client.on("message", (message) => {
             messagesDeleted = messages.array().length; // number of messages deleted
 
             // Logging the number of messages deleted on both the channel and console.
-            message.channel.sendMessage("Messaggi cancellati con successo. Messaggi cancellati: "+messagesDeleted).then(msg => msg.delete(60000));
+            message.channel.sendMessage("Messaggi cancellati con successo. Messaggi cancellati: "+messagesDeleted).then(msg => msg.delete(3000));
             console.log('Messaggi cancellati con successo. Messaggi cancellati: '+messagesDeleted)
           })
           .catch(err => {
