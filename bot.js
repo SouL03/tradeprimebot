@@ -14,7 +14,7 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
-      if (message.content == CLEAR_MESSAGES) {
+    if (message.content == CLEAR_MESSAGES) {
 
       // Check the following permissions before deleting messages:
       //    1. Check if the user has enough permissions
@@ -47,6 +47,7 @@ client.on("message", (message) => {
             console.log(err);
           });
       }
+    }
   
   //Montage Command
   if (message.content === prefix + 'giochi') {
