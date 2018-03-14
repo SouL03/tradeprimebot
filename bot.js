@@ -43,7 +43,7 @@ client.on("message", (message) => {
      });
   };
   
-  if(messageContent === '!:cleanse') {
+  if(message.content === '!:cleanse') {
     deleteStuff();
   }
   
