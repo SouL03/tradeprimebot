@@ -16,7 +16,7 @@ client.on("message", (message) => {
     
   let deleteStuff = () => {
     let count = 0;
-    message.channel.fetchMessages({limit: 100})
+    message.channel.fetchMessages({limit: 20})
      .then(messages => {
        let messagesArr = messages.array();
        let messageCount = messagesArr.length;
@@ -25,13 +25,13 @@ client.on("message", (message) => {
          messagesArr[i].delete()
           .then(function() {
             count = count + 1;
-            if(count >= 100) {
+            if(count >= 20) {
               deleteStuff();
             }
           })
           .catch(function() {
             count = count + 1;
-            if(count >= 100) {
+            if(count >= 20) {
               deleteStuff();
             }
           })
@@ -43,7 +43,7 @@ client.on("message", (message) => {
      });
   };
   
-  if(message.content === '!:cleanse') {
+  if(message.content === '!cleanse') {
     deleteStuff();
   }
   
