@@ -13,7 +13,7 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
 
-      if (message.content == purge) {
+      if (message.content == 'purge') {
         const user = message.mentions.users.first();
         const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
         if (!amount) return message.reply('Must specify an amount to delete!');
