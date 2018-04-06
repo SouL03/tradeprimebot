@@ -62,7 +62,7 @@ client.on("message", (message) => {
         description: "La lista dei giochi disponibili sul nostro server discord",
         fields: [{
             name: "Giochi",
-            value: "- **Dead by Daylight**\n- **Rocket League**\n- **PUBG**\n- **Fornite**"
+            value: "- **Dead by Daylight**\n- **Rocket League**\n- **Fornite**"
           }
         ],
       }
