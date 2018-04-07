@@ -14,7 +14,7 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
-      if (message.author.bot || !message.content.startsWith(cfg.prefix)) return;
+      if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         message.channel.send('OK');
       
     
