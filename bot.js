@@ -14,8 +14,11 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
-      if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
-        message.channel.send('OK');
+      if { (!message.content.startsWith(cfg.prefix))
+          message.channel.send('OK'):
+      }
+      //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
+        //message.channel.send('OK');
       
     
       if (message.content == CLEAR_MESSAGES) {
