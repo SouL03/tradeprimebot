@@ -21,7 +21,7 @@ client.on("message", (message) => {
         }
       }
     
-      if (message.channel.id == '432288714090348544' && message.content === prefix + 'lol') {
+      if (message.channel.id == '432297512318009364' && message.content === prefix + 'lol') {
          message.channel.sendMessage('Io no');   
       }
     
