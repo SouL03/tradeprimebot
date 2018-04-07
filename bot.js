@@ -17,7 +17,7 @@ client.on("message", (message) => {
       const PUBG = " nanomerda"
     
       if (message.channel.id === '432288714090348544') {
-        if (isNaN(message.content)) {
+        if (isNaN(message.content.indexOf(config.prefix) !== 0)) {
             message.delete()
             message.author.send('Ok ma non credo proprio')
         }
