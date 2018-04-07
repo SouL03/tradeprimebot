@@ -15,7 +15,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
     
       if (!message.content.startsWith(cfg.prefix)) {
-          message.channel.send('OK'):
+          message.channel.send('OK');
       }
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
