@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "!";
 const CLEAR_MESSAGES = '!clearMessages';
+const cfg = './config.json';
 
 client.on("ready", () => {
     console.log("I am ready!");
@@ -12,6 +13,10 @@ client.on("ready", () => {
 
 //Bot Custom Commands
 client.on("message", (message) => {
+    
+      if (message.author.bot || !msg.content.startsWith(cfg.prefix)) return;
+      const args = msg.content.slice(cfg.prefix.length).split('');
+      const command = args.shift().toLowerCase();
     
       if (message.content == CLEAR_MESSAGES) {
 
