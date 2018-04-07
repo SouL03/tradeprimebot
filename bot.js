@@ -14,7 +14,7 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
-      const PUBG = "nanomerda"
+      const PUBG = " nanomerda"
     
       if (message.channel.id === '432288714090348544') {
         if (isNaN(message.content)) {
