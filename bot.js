@@ -14,18 +14,12 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
-      const PUBG = " nanomerda"
-    
       if (message.channel.id === '432288714090348544') {
         if (isNaN(message.content.indexOf(config.prefix) !== 0)) {
             message.delete()
             message.author.send('Ok ma non credo proprio')
         }
       }
-    
-     if (message.content === prefix + 'sick') {
-        message.channel.sendMessage('__*Sick is so fucking good*__' + PUBG);   
-     }
     
       if (message.channel.id == '432297512318009364' && message.content === prefix + 'lol') {
          message.channel.sendMessage('Io no');   
@@ -37,6 +31,41 @@ client.on("message", (message) => {
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
       
+       if (message.content === prefix + 'silver') {
+    message.delete();
+    message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
+    message.author.sendFile("./Silver-Accademy.png");
+  }
+
+  if (message.content === prefix + 'gold') {
+    message.delete();
+    message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Gold Accademy');
+    message.author.sendFile("./Gold-Accademy.png");
+  }
+
+  if (message.content === prefix + 'platinum') {
+    message.delete();
+    message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Platinum Accademy');
+    message.author.sendFile("./Platinum-Accademy.png");
+  }
+
+  if (message.content === prefix + 'diamond') {
+    message.delete();
+    message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Diamond Accademy');
+    message.author.sendFile("./Diamond-Accademy.png");
+  }
+
+  if (message.content === prefix + 'champion') {
+    message.delete();
+    message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Champion Accademy');
+    message.author.sendFile("./Champion-Accademy.png");
+  }
+    
+  if (message.content === prefix + 'gc') {
+    message.delete();
+    message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della GrandChampion Accademy');
+    message.author.sendFile("./GrandChampion-Accademy.png");
+  }
     
       if (message.content == CLEAR_MESSAGES) {
 
