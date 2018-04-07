@@ -14,12 +14,18 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
+      const PUBG = "nanomerda"
+    
       if (message.channel.id === '432288714090348544') {
         if (isNaN(message.content)) {
             message.delete()
             message.author.send('Ok ma non credo proprio')
         }
       }
+    
+     if (message.content === prefix + 'sick') {
+        message.channel.sendMessage('__*Sick is so fucking good*__' + PUBG);   
+     }
     
       if (message.channel.id == '432297512318009364' && message.content === prefix + 'lol') {
          message.channel.sendMessage('Io no');   
