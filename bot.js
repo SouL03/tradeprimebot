@@ -14,6 +14,10 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
+      if (message.channel.id == '432288714090348544' && message.content === prefix + 'lol') {
+         message.channel.sendMessage('Io no');   
+      }
+    
       //if (message.author.bot || !message.content.startsWith(cfg.prefix)) {
           //message.channel.sendMessage('OK');
       //}
