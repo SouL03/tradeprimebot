@@ -15,8 +15,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
     
       if (message.author.bot || !msg.content.startsWith(cfg.prefix)) return;
-      const args = msg.content.slice(cfg.prefix.length).split('');
-      const command = args.shift().toLowerCase();
+      console.log(message.content);
     
       if (message.content == CLEAR_MESSAGES) {
 
