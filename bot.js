@@ -56,15 +56,11 @@ client.on("message", (message) => {
       //}
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
-  if(message.member.roles.has(399497218291400705))  {
     if (message.content === cfg.prefix + 'silver') {
       message.delete()
       message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
       message.author.sendFile("./Silver-Accademy.png");
     }
-  } else if(!message.content === cfg.prefix + 'silver') {
-    message.author.sendMessage('Cosa stai cercando di fare? Non fai parte di questa __*accademia*__');
-  }
 
   if (message.content === cfg.prefix + 'gold') {
     message.delete();
