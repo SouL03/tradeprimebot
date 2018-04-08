@@ -13,14 +13,14 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
    
-    case "getkey":
-    let Silver = message.guild.roles.find("name", "Silver");
-    if(message.member.roles.has(Silver)) {
-      message.author.sendMessage("U got r3kt")
-    } else {
-      return message.reply("COME OSI!")
+    if(message.content === '!silver') {
+       let Silver = message.guild.roles.find("name","Silver");
+       if(message.member.roles.has(Silver.id)) {
+         message.channel.sendMessage("Bar!);
+       } else {
+          message.reply("Non hai il permesso");                          
+       }
     }
-  
                                 
     if (message.channel.id === '432590203090239488') {
        if(message.content.indexOf(cfg.prefix) !== 0) {
