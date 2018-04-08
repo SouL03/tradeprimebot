@@ -13,15 +13,15 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
    
-    if(message.content === '!silver') {
-       message.delete();
-       let Silver = message.guild.roles.find("name","Silver");
-       if(message.member.roles.has(Silver.id) || message.member.hasPermission('MANAGE_ROLES')) {
+    //if(message.content === '!silver') {
+       //message.delete();
+       //let Silver = message.guild.roles.find("name","Silver");
+       //if(message.member.roles.has(Silver.id) || message.member.hasPermission('MANAGE_ROLES')) {
          
-       } else {
-          message.author.sendMessage("Non hai il permesso");                          
-       }
-    }
+       //} else {
+          //message.author.sendMessage("Non hai il permesso");                          
+       //}
+    //}
     if (message.channel.id === '432590203090239488') {
        if(message.content.indexOf(cfg.prefix) !== 0) {
            message.delete();
@@ -56,6 +56,12 @@ client.on("message", (message) => {
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
     if (message.content === cfg.prefix + 'silver') {
+       let Silver = message.guild.roles.find("name","Silver");
+       if(message.member.roles.has(Silver.id) || message.member.hasPermission('MANAGE_ROLES')) {
+          message.delete()
+       } else {
+          message.author.sendMessage("Non hai il permesso cojoneeeee");                          
+       }
       message.delete()
       message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
       message.author.sendFile("./Silver-Accademy.png");
