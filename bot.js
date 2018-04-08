@@ -59,12 +59,11 @@ client.on("message", (message) => {
        let Silver = message.guild.roles.find("name","Silver");
        if(message.member.roles.has(Silver.id) || message.member.hasPermission('MANAGE_ROLES')) {
           message.delete()
+          message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
+          message.author.sendFile("./Silver-Accademy.png");
        } else {
           message.author.sendMessage("Non hai il permesso cojoneeeee");                          
        }
-      message.delete()
-      message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
-      message.author.sendFile("./Silver-Accademy.png");
     }
 
   if (message.content === cfg.prefix + 'gold') {
