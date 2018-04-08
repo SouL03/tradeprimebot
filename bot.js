@@ -52,7 +52,7 @@ client.on("message", (message) => {
       message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
       message.author.sendFile("./Silver-Accademy.png");
     }
-  } else {
+  } else if(!message.content === cfg.prefix + 'silver') {
     message.author.sendMessage('Cosa stai cercando di fare? Non fai parte di questa __*accademia*__');
   }
 
