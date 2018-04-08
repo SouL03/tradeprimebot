@@ -18,9 +18,6 @@ client.on("message", (message) => {
            message.delete();
        //if (message.content.startsWith(cfg.prefix)
        }
-       if (message.content.startsWith(cfg.prefix)) {
-          message.channel.sendMessage('LMAO');
-       }
     }
     
     if (message.channel.id === '432288714090348544') {
