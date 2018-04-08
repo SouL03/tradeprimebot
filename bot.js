@@ -12,6 +12,15 @@ client.on("ready", () => {
 
 //Bot Custom Commands
 client.on("message", (message) => {
+   
+    case "getkey":
+    let Silver = message.guild.roles.find("name", "Silver");
+    if(message.member.roles.has(Silver.399497218291400705)) {
+      message.author.sendMessage("U got r3kt")
+    } else {
+      return message.reply("COME OSI!")
+    }
+  
                                 
     if (message.channel.id === '432590203090239488') {
        if(message.content.indexOf(cfg.prefix) !== 0) {
