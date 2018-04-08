@@ -17,6 +17,7 @@ client.on("message", (message) => {
        if (message.content.indexOf(config.prefix) !== 0) return;
            message.delete()
            message.author.send('Ok ma non credo proprio')
+       }
         
       if (message.channel.id === '432288714090348544') {
         if (isNaN(message.content.indexOf(cfg.prefix) !== 0)) {
