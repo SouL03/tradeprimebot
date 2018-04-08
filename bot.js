@@ -14,10 +14,11 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     if (message.channel.id === '432288714090348544') {
-       if (message.content.indexOf(cfg.prefix) !== 0) return;
-           message.delete()
-           message.author.send('Ok ma non credo proprio')
+       if (message.content.indexOf(cfg.prefix) !== 0) {
+         message.delete()
+         message.author.send('Ok ma non credo proprio')
        }
+    }
         
       if (message.channel.id === '432288714090348544') {
         if (isNaN(message.content.indexOf(cfg.prefix) !== 0)) {
