@@ -13,7 +13,7 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
                                 
-    if (message.channel.id === '432506666718593024') {
+    if (message.channel.id === '432590203090239488') {
        if(message.content.indexOf(cfg.prefix) !== 0) {
            message.delete();
        //if (message.content.startsWith(cfg.prefix)
