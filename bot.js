@@ -14,7 +14,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
     
     if (message.channel.id === '432506666718593024') {
-       if(message.content.indexOf(config.prefix) !== 0) {
+       if(message.content.indexOf(cfg.prefix) !== 0) {
            message.delete();
        //if (message.content.startsWith(cfg.prefix)
        }
@@ -122,7 +122,7 @@ client.on("message", (message) => {
     
   
   //Montage Command
-  if (message.content === prefix + 'giochi') {
+  if (message.content === cfg.prefix + 'giochi') {
     message.delete(10000);
     message.channel.send({embed: {
         color: 3447003,
