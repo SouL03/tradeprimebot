@@ -40,7 +40,7 @@ client.on("message", (message) => {
         }
       }
     
-      if (message.channel.id == '432297512318009364' && message.content === prefix + 'lol') {
+      if (message.channel.id == '432297512318009364' && message.content === cfg.prefix + 'lol') {
          message.channel.sendMessage('Io no');   
       }
     
@@ -50,76 +50,40 @@ client.on("message", (message) => {
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
       
-       if (message.content === prefix + 'silver') {
+       if (message.content === cfg.refix + 'silver') {
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
     message.author.sendFile("./Silver-Accademy.png");
   }
 
-  if (message.content === prefix + 'gold') {
+  if (message.content === cfg.prefix + 'gold') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Gold Accademy');
     message.author.sendFile("./Gold-Accademy.png");
   }
 
-  if (message.content === prefix + 'platinum') {
+  if (message.content === cfg.prefix + 'platinum') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Platinum Accademy');
     message.author.sendFile("./Platinum-Accademy.png");
   }
 
-  if (message.content === prefix + 'diamond') {
+  if (message.content === cfg.prefix + 'diamond') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Diamond Accademy');
     message.author.sendFile("./Diamond-Accademy.png");
   }
 
-  if (message.content === prefix + 'champion') {
+  if (message.content === cfg.prefix + 'champion') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Champion Accademy');
     message.author.sendFile("./Champion-Accademy.png");
   }
     
-  if (message.content === prefix + 'gc') {
+  if (message.content === cfg.prefix + 'gc') {
     message.delete();
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della GrandChampion Accademy');
     message.author.sendFile("./GrandChampion-Accademy.png");
   }
-    
-      if (message.content == CLEAR_MESSAGES) {
-
-      // Check the following permissions before deleting messages:
-      //    1. Check if the user has enough permissions
-      //    2. Check if I have the permission to execute the command
-
-      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Non hai il permesso per eseguire questo comando \""+message.content+"\"");
-        console.log("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
-        return;
-      } else if (!message.channel.permissionsFor(client.user).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Non ho il permesso di eseguire questo comando \""+message.content+"\"");
-        console.log("Sorry, I don't have the permission to execute the command \""+message.content+"\"");
-        return;
-      }
-
-      // Only delete messages if the channel type is TextChannel
-      // DO NOT delete messages in DM Channel or Group DM Channel
-      if (message.channel.type == 'text') {
-        message.channel.fetchMessages()
-          .then(messages => {
-            message.channel.bulkDelete(messages);
-            messagesDeleted = messages.array().length; // number of messages deleted
-
-            // Logging the number of messages deleted on both the channel and console.
-            message.channel.sendMessage("Messaggi cancellati con successo. Messaggi cancellati: "+messagesDeleted).then(msg => msg.delete(3000));
-            console.log('Messaggi cancellati con successo. Messaggi cancellati: '+messagesDeleted)
-          })
-          .catch(err => {
-            console.log('Errore nel facendo Bulk Delete');
-            console.log(err);
-          });
-      }
-    }
-    
   
   //Montage Command
   if (message.content === cfg.prefix + 'giochi') {
@@ -146,7 +110,7 @@ client.on("message", (message) => {
     
   //Help Command
     
-  if (message.content === prefix + 'aiuto') {
+  if (message.content === cfg.prefix + 'aiuto') {
     message.delete(30000);
     message.channel.send({embed: {
         color: 3447003,
