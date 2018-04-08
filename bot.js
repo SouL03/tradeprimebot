@@ -16,13 +16,12 @@ client.on("message", (message) => {
     if(message.content === '!silver') {
        message.delete();
        let Silver = message.guild.roles.find("name","Silver");
-       if(message.member.roles.has(Silver.id)) {
-         message.channel.sendMessage("Bar!");
+       if(message.member.roles.has(Silver.id) || message.member.hasPermission('MANAGE_ROLES')) {
+         
        } else {
           message.author.sendMessage("Non hai il permesso");                          
        }
     }
-                                
     if (message.channel.id === '432590203090239488') {
        if(message.content.indexOf(cfg.prefix) !== 0) {
            message.delete();
