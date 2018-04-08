@@ -19,7 +19,7 @@ client.on("message", (message) => {
     }
         
       if (message.channel.id === '432288714090348544') {
-        if (isNaN(message.content.indexOf(cfg.prefix) !== 0)) {
+        if (isNaN(message.content)) {
             message.delete()
             message.author.send('Ok ma non credo proprio')
         }
