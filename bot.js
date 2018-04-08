@@ -15,7 +15,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
     
     if (message.channel.id === '432502763612799007') {
-       if (!message.content.includes == '!silver' ||'!gold' || '!platinum' || '!diamond' || '!champion' || '!gc') {
+       if (!message.content.includes == '!giochi' ||'!gold' || '!platinum' || '!diamond' || '!champion' || '!gc') {
           message.delete(0);
           message.author.send('Ah si bravissimo!')
        }
