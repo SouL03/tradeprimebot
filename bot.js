@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const CLEAR_MESSAGES = '!clearMessages';
-const cfg = './config.json';
-prefix = "!";
+const cfg = require("./config.json")
 
 client.on("ready", () => {
     console.log("I am ready!");
@@ -16,7 +15,7 @@ client.on("message", (message) => {
     
     if (message.channel.id === '432506666718593024') {
        if (message.content.startsWith(cfg.prefix)
-       else {
+       return {
           message.delete();
           message.author.send('Ah si bravissimo!')
        }
