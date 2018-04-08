@@ -13,6 +13,14 @@ client.on("ready", () => {
 
 //Bot Custom Commands
 client.on("message", (message) => {
+    
+    if (message.channel.id === '432502763612799007') {
+       if (message.content.includes == '!silver' ||'!gold' || '!platinum' || '!diamond' || '!champion' || '!gc') {
+          message.delete(1);
+          message.author.send('Ah si bravissimo!')
+       }
+    }
+    
     if (message.channel.id === '432288714090348544') {
          message.delete()
          message.author.send('Ok ma non credo proprio')
