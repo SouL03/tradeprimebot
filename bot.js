@@ -46,7 +46,7 @@ client.on("message", (message) => {
       //}
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
-  if(!message.member.roles.some(r=>["Silver", "Clan Member"].includes(r.name)) ) {
+  if(message.member.role.has('Silver')) {
     if (message.content === cfg.prefix + 'silver') {
       message.delete()
       message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
