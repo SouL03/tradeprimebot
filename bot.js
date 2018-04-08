@@ -14,10 +14,12 @@ client.on("ready", () => {
 client.on("message", (message) => {
     
     if (message.channel.id === '432506666718593024') {
-       if (message.content.startsWith(cfg.prefix)
-       return {
-          message.delete();
-          message.author.send('Ah si bravissimo!')
+       if(message.content.indexOf(config.prefix) !== 0) {
+           message.delete();
+       //if (message.content.startsWith(cfg.prefix)
+       }
+       if (message.content.startsWith(cfg.prefix)) {
+          message.channel.sendMessage('LMAO');
        }
     }
     
