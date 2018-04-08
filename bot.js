@@ -56,13 +56,15 @@ client.on("message", (message) => {
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
     if (message.content === cfg.prefix + 'silver') {
+       message.delete();
        let Silver = message.guild.roles.find("name","Silver");
        if(message.member.roles.has(Silver.id) || message.member.hasPermission('MANAGE_ROLES')) {
-          message.delete()
+          message.delete();
           message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
           message.author.sendFile("./Silver-Accademy.png");
        } else {
-          message.author.sendMessage("Non hai il permesso cojoneeeee");                          
+          message.author.sendMessage("Non hai il permesso cojoneeeee");
+          message.delete();
        }
     }
 
