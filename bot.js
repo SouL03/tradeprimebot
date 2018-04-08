@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const CLEAR_MESSAGES = '!clearMessages';
 const cfg = './config.json';
+prefix = "!";
 
 client.on("ready", () => {
     console.log("I am ready!");
