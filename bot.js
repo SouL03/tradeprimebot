@@ -14,11 +14,17 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
-    if (message.channel.id === '432502763612799007') {
-       if (!message.content.includes == '!giochi' ||'!gold' || '!platinum' || '!diamond' || '!champion' || '!gc') {
-          message.delete(0);
+    if (message.channel.id === '432506666718593024') {
+       if (message.content.startsWith(cfg.prefix)
+       else {
+          message.delete();
           message.author.send('Ah si bravissimo!')
        }
+    }
+    
+    if (message.channel.id === '432288714090348544') {
+       message.delete()
+       message.author.send('Ok ma non credo proprio')
     }
     
     if (message.channel.id === '432288714090348544') {
