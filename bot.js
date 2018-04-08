@@ -15,7 +15,7 @@ client.on("message", (message) => {
    
     case "getkey":
     let Silver = message.guild.roles.find("name", "Silver");
-    if(message.member.roles.has(Silver.399497218291400705)) {
+    if(message.member.roles.has(Silver)) {
       message.author.sendMessage("U got r3kt")
     } else {
       return message.reply("COME OSI!")
