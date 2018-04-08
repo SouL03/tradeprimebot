@@ -18,7 +18,6 @@ client.on("message", (message) => {
            message.delete();
        //if (message.content.startsWith(cfg.prefix)
        }
-       if (message.content.startsWith(cfg.prefix))
     }
     
     if (message.channel.id === '432288714090348544') {
@@ -48,7 +47,7 @@ client.on("message", (message) => {
       //if (message.author.client || !message.content.startsWith(cfg.prefix)) return;
         //message.channel.send('OK');
       
-       if (message.content === cfg.prefix + 'silver') {
+  if (message.content === cfg.prefix + 'silver') {
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
     message.author.sendFile("./Silver-Accademy.png");
   }
