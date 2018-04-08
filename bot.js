@@ -48,6 +48,7 @@ client.on("message", (message) => {
         //message.channel.send('OK');
       
   if (message.content === cfg.prefix + 'silver') {
+    message.delete()
     message.author.sendMessage('Ciao ' + message.author + '. Ecco il logo della Silver Accademy');
     message.author.sendFile("./Silver-Accademy.png");
   }
