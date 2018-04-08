@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = cfg.prefix;
 const CLEAR_MESSAGES = '!clearMessages';
 const cfg = './config.json';
 
