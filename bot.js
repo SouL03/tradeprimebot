@@ -18,7 +18,7 @@ client.on("message", (message) => {
        if(message.member.roles.has(Silver.id)) {
          message.channel.sendMessage("Bar!");
        } else {
-          message.reply("Non hai il permesso");                          
+          message.author.sendMessage("Non hai il permesso");                          
        }
     }
                                 
