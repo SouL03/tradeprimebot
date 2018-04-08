@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "!";
+const prefix = config.prefix;
 const CLEAR_MESSAGES = '!clearMessages';
 const cfg = './config.json';
 
@@ -14,10 +14,8 @@ client.on("ready", () => {
 //Bot Custom Commands
 client.on("message", (message) => {
     if (message.channel.id === '432288714090348544') {
-       if (message.content.indexOf(cfg.prefix) !== 0) {
          message.delete()
          message.author.send('Ok ma non credo proprio')
-       }
     }
         
       if (message.channel.id === '432288714090348544') {
