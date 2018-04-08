@@ -16,7 +16,7 @@ client.on("message", (message) => {
     if(message.content === '!silver') {
        let Silver = message.guild.roles.find("name","Silver");
        if(message.member.roles.has(Silver.id)) {
-         message.channel.sendMessage("Bar!);
+         message.channel.sendMessage("Bar!");
        } else {
           message.reply("Non hai il permesso");                          
        }
