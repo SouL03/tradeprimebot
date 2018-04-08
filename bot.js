@@ -14,6 +14,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
    
     if(message.content === '!silver') {
+       message.delete();
        let Silver = message.guild.roles.find("name","Silver");
        if(message.member.roles.has(Silver.id)) {
          message.channel.sendMessage("Bar!");
