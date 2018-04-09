@@ -20,7 +20,7 @@ client.on("message", async message => {
            const user = message.mentions.users.first();
            const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
            if (!amount) return message.reply('Devi specificare il numero di messaggi da eliminare.').then(msg => msg.delete(5000));
-           if (!amount && !user) return message.reply('Devi specificare il numero e l'\'utente, o solamente un numero, di messaggi da eliminare');
+           if (!amount && !user) return message.reply('Devi specificare il numero e l\'utente, o solamente un numero, di messaggi da eliminare');
            message.channel.fetchMessages({
              limit: amount,
            }).then((messages) => {
