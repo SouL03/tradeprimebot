@@ -16,7 +16,7 @@ client.on("message", (message) => {
     const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     
-    if(command.content === cfg.prefix + 'clear' ) {
+    if(command.content === cfg.prefix + 'cancella' ) {
         if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
         if(!args[0]) return message.channel.send("oof.");
         message.channel.bulkDelete(args[0]).then(() => {
