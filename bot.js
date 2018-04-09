@@ -33,7 +33,7 @@ client.on("message", async message => {
         }
  } else {
     message.author.sendMessage("Non hai il permesso di utilizzare questo comando");
-
+    message.delete();
  }
     
 });
