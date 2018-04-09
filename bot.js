@@ -10,56 +10,32 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-       const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
-       const command = args.shift().toLowerCase();
-    if(command === 'fai') {
-       const user = message.mentions.users.first();
-       const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
-       if (!amount) return message.reply('Must specify an amount to delete!');
-       if (!amount && !user) return message.reply('Must specify a user and amount, or just an amount, of messages to purge!');
-       message.channel.fetchMessages({
-         limit: amount,
-       }).then((messages) => {
-         if (user) {
-         const filterBy = user ? user.id : Client.user.id;
-         messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
-         }
-         message.channel.bulkDelete(messages).catch(error => console.log(error.stack));
-       });
-    }
+        const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
     
-       if(message.content === cfg.prefix + 'elimina') {
-         let numberMessages = args[0];
-           
-         const fetched = await message.channel.fetchMessages({count: numberMessages});
-         message.channel.bulkDelete(numberMessages)
-            .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-       }
+        let Moderatore = message.guild.roles.find("name","Moderatore");
     
-       if(message.content === cfg.prefix + 'cancella' ) {
-         if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
-         if(!args[0]) return message.channel.send("oof.");
-         message.channel.bulkDelete(args[0]).then(() => {
-             message.channel.send('Cancellati ${args[0]} messaggi.').then(msg => msg.delete(5000));
-         });
-       }
+ if(message.member.roles.has(Moderatore.id) || message.member.hasPermission('MANAGE_MESSAGES')) {        
+        if(command === 'cancella') {
+           const user = message.mentions.users.first();
+           const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
+           if (!amount) return message.reply('Devi specificare il numero di messaggi da eliminare.').then(msg => msg.delete(5000));
+           if (!amount && !user) return message.reply('Devi specificare il numero o l'\'utente, o solamente un numero, di messaggi da eliminare');
+           message.channel.fetchMessages({
+             limit: amount,
+           }).then((messages) => {
+             if (user) {
+             const filterBy = user ? user.id : Client.user.id;
+             messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
+             }
+             message.channel.bulkDelete(messages).catch(error => console.log(error.stack));
+           });
+        }
+ } else {
+    message.author.sendMessage("Non hai il permesso di utilizzare questo comando");
+    message.delete();
+ }
     
-    
-       if(command === "purge") {
-            // This command removes all messages from all users in the channel, up to 100.
-    
-            // get the delete count, as an actual number.
-            const deleteCount = parseInt(args[0], 10);
-    
-            // Ooooh nice, combined conditions. <3
-            if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-                return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
-    
-            // So we get our messages, and delete them. Simple enough, right?
-            const fetched = await message.channel.fetchMessages({count: deleteCount});
-            message.channel.bulkDelete(fetched)
-                .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-       }
 });
 
 //Bot Custom Commands
