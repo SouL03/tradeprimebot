@@ -17,7 +17,7 @@ client.on("message", async message => {
          let numberMessages = args[0];
            
          const fetched = await message.channel.fetchMessages({count: numberMessages});
-         message.channel.bulkDelete(fetched)
+         message.channel.bulkDelete(numberMessages)
             .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
        }
     
