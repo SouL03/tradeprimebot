@@ -19,8 +19,8 @@ client.on("message", (message) => {
     if(message.content === cfg.prefix + 'cancella' ) {
         if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
         if(!args[0]) return message.channel.send("oof.");
-        message.channel.bulkDelete(args[0]).then(() => {
-            message.channel.send('Cancellati ${args[0]} messaggi.').then(msg => msg.delete(5000));
+        message.channel.bulkDelete(args[1]).then(() => {
+            message.channel.send('Cancellati ${args[1]} messaggi.').then(msg => msg.delete(5000));
         });
     }
    
