@@ -13,6 +13,14 @@ client.on("message", async message => {
        const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
        const command = args.shift().toLowerCase();
     
+       if(message.content === cfg.prefix + 'elimina') {
+         let numberMessages = args[1];
+           
+         const fetched = await message.channel.fetchMessages({count: numberMessages});
+         message.channel.bulkDelete(fetched)
+            .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+       }
+    
        if(message.content === cfg.prefix + 'cancella' ) {
          if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
          if(!args[0]) return message.channel.send("oof.");
