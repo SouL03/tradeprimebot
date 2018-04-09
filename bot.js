@@ -55,10 +55,10 @@ client.on("message", (message) => {
        //}
     //}
     
-    if (message.content === prefix + 'count') {
-     
-        const guildID = "380092076513165312"
-        var memberCount = discord.bot.guilds.get(guildID).members.size()
+    if (message.content === prefix + 'count') {  
+        const guildID = "380092076513165312";
+        let memberCount = discord.bot.guilds.get(guildID).members.size();
+        
         message.channel.sendMessage('Ci sono ' + memberCount ' membri in questo server!');
         
     }
