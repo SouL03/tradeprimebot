@@ -54,6 +54,15 @@ client.on("message", (message) => {
           //message.author.sendMessage("Non hai il permesso");                          
        //}
     //}
+    
+    if (message.content === prefix + 'membercount') {
+     
+        const guildID = "380092076513165312"
+        var memberCount = discord.bot.guilds.get(guildID).members.size()
+        message.channel.sendMessage("Ci sono " + memberCount " membri in questo server!");
+        
+    }
+    
     if (message.channel.id === '432590203090239488') {
        if(message.content.indexOf(cfg.prefix) !== 0) {
            message.delete();
