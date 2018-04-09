@@ -14,7 +14,7 @@ client.on("message", async message => {
        const command = args.shift().toLowerCase();
     
        if(message.content === cfg.prefix + 'elimina') {
-         let numberMessages = args[1];
+         let numberMessages = args[0];
            
          const fetched = await message.channel.fetchMessages({count: numberMessages});
          message.channel.bulkDelete(fetched)
