@@ -12,6 +12,16 @@ client.on("ready", () => {
 client.on("message", async message => {
        const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
        const command = args.shift().toLowerCase();
+    
+       if(message.command === 'cancella' ) {
+         if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
+         if(!args[0]) return message.channel.send("oof.");
+         message.channel.bulkDelete(args[0]).then(() => {
+             message.channel.send('Cancellati ${args[1]} messaggi.').then(msg => msg.delete(5000));
+         });
+       }
+    
+    
        if(command === "purge") {
             // This command removes all messages from all users in the channel, up to 100.
     
