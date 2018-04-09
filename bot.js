@@ -17,7 +17,7 @@ client.on("message", async message => {
          if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
          if(!args[0]) return message.channel.send("oof.");
          message.channel.bulkDelete(args[0]).then(() => {
-             message.channel.send('Cancellati ${args[1]} messaggi.').then(msg => msg.delete(5000));
+             message.channel.send('Cancellati ${args[0]} messaggi.').then(msg => msg.delete(5000));
          });
        }
     
@@ -44,14 +44,6 @@ client.on("message", (message) => {
     
     const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    
-    if(message.content === cfg.prefix + 'cancella' ) {
-        if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
-        if(!args[0]) return message.channel.send("oof.");
-        message.channel.bulkDelete(args[1]).then(() => {
-            message.channel.send('Cancellati ${args[1]} messaggi.').then(msg => msg.delete(5000));
-        });
-    }
     
    
     //if(message.content === '!silver') {
