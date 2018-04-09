@@ -13,7 +13,7 @@ client.on("message", async message => {
        const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
        const command = args.shift().toLowerCase();
     
-       if(message.command === 'cancella' ) {
+       if(message.content === cfg.prefix + 'cancella' ) {
          if(!message.member.hasPermission("MANAGE_PERMISSIONS")) return message.reply("oof.");
          if(!args[0]) return message.channel.send("oof.");
          message.channel.bulkDelete(args[0]).then(() => {
