@@ -17,7 +17,7 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', member => {
        //member.guild.defaultChannel.send(`Benvenuto nel server, ${member}!`);
-       member.sendFile(`Testing message.`, {
+       member.send(`Testing message.`, {
   files: [
     "./Welcome Message.png"
   ]
