@@ -27,7 +27,7 @@ client.on("message", (message) => {
     const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     
-   
+});
  
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
