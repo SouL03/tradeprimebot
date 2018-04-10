@@ -30,13 +30,13 @@ client.on('guildMemberAdd', member => {
         //}
     //});
    const embed = new Discord.RichEmbed()
-  .setTitle("Clicca per ingrandire")
+    .setTitle("Clicca per ingrandire")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
-  .setColor(0x00AE86)
-  .setFooter("Sponsorizzato da Trade Prime")
-  .setImage("./Welcome Message.png")
+    .setColor(0x00AE86)
+    .setFooter("Sponsorizzato da Trade Prime")
+    .setImage("./Welcome Message.png")
 
   message.channel.send({embed});
 });
