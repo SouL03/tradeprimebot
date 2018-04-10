@@ -4,8 +4,6 @@ const cfg = require("./config.json")
 
 client.on("ready", () => {
     console.log("I am ready!");
-    client.user.setGame("");
-    client.user.setPresence({ game: { name: '', type: 0 } });
 });
 
 client.on("message", async message => {
