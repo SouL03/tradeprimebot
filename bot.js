@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const CLEAR_MESSAGES = '!clearMessages';
 const cfg = require("./config.json")
 
 client.on("ready", () => {
@@ -22,7 +21,7 @@ client.on('guildMemberAdd', member => {
                 //"./Welcome Message.png"
             //]
        //}, 'LOL5x')
-       member.sendFile("./Welcome Message.png");
+       member.message.sendFile("./Welcome Message.png");
 });
 
 //Bot Custom Commands
