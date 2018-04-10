@@ -17,9 +17,7 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', member => {
        //member.guild.defaultChannel.send(`Benvenuto nel server, ${member}!`);
-       member.send("Benvenuto nel Server Discord Ufficiale di **TradePrime**");
-       member.sendFile('./Welcome Message.png');
-       member.send("`Sponsorizzato da TradePrime`")
+       member.sendFile("./Welcome Message.png", null, "`Sponsorizzato da TradePrime`";
 });
 
 //Bot Custom Commands
