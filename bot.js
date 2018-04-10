@@ -20,7 +20,7 @@ client.on('guildMemberAdd', member => {
             //]
        //}, 'LOL5x')
        member.sendMessage({embed: {
-         color: "fc092c",
+         color: 15158332,
          title: "**Clicca per ingrandire l'immagine**",
          "image":{
            "url":"https://imgur.com/PMTOzjd.png",
