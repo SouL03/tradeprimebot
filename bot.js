@@ -21,10 +21,9 @@ client.on('guildMemberAdd', member => {
                 //"./Welcome Message.png"
             //]
        //}, 'LOL5x')
-       member.send({embed: {
+       member.sendMessage({embed: {
          color: 3447003,
          title: "Comandi Supportati",
-         image: "./Welcome Message.png",
          footer: {
            icon_url: client.user.avatarURL,
            text: "Sponsorizzato da Trade Prime"
