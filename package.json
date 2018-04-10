@@ -1,6 +1,6 @@
 {
-  "name": "AmazingPlays",
-  "description": "A Discord bot coded in Discord.JS, hosted using Heroku.",
+  "name": "TradePrimeBot",
+  "description": "Un bot discord per il server ufficiale di TradePrime",
   "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
