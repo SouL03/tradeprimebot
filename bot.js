@@ -26,6 +26,8 @@ client.on('guildMemberAdd', member => {
          title: "Comandi Supportati",
          "image":{
          "url":"https://imgur.com/PMTOzjd",
+         "height":805,
+         "width":452
          },
          footer: {
            icon_url: client.user.avatarURL,
