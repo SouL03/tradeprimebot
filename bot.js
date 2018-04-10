@@ -29,7 +29,7 @@ client.on('guildMemberAdd', member => {
            icon_url: client.user.avatarURL,
            text: "Sponsorizzato da Trade Prime"
          }
-       });
+       })
 });
 
 //Bot Custom Commands
