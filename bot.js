@@ -28,6 +28,10 @@ client.on('guildMemberAdd', member => {
 //Bot Custom Commands
 client.on("message", (message) => {
     
+    if (message.react('<:steam:431581850457079819>')) {
+        message.member.addRole('433080328920498176');
+    }
+    
     const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     
