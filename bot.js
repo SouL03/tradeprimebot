@@ -23,13 +23,13 @@ client.on('guildMemberAdd', member => {
        //}, 'LOL5x')
        member.sendMessage({embed: {
          color: 3447003,
-         title: "Comandi Supportati",
+         title: "**Clicca per ingrandire l'immagine**",
          "image":{
            "url":"https://imgur.com/PMTOzjd.png",
          },
          footer: {
-           icon_url: client.user.avatarURL,
-           text: "Sponsorizzato da Trade Prime"
+           text: "Sponsorizzato da Trade Prime",
+           icon_url: client.user.avatarURL
          }
        }
     })
