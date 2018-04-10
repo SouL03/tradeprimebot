@@ -21,24 +21,15 @@ client.on('guildMemberAdd', member => {
                 //"./Welcome Message.png"
             //]
        //}, 'LOL5x')
-       //member.send({embed: {
-        //color: 3447003,
-        //title: "Comandi Supportati",
-        //footer: {
-          //icon_url: client.user.avatarURL,
-          //text: "Sponsorizzato da Trade Prime"
-        //}
-    //});
-   const embed = new Discord.RichEmbed()
-    .setTitle("Clicca per ingrandire")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-    .setColor(0x00AE86)
-    .setFooter("Sponsorizzato da Trade Prime")
-    .setImage("./Welcome Message.png")
-
-  message.channel.send({embed});
+       member.send({embed: {
+        color: 3447003,
+        title: "Comandi Supportati",
+        image: "./Welcome Message.png",
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: "Sponsorizzato da Trade Prime"
+        }
+    });
 });
 
 //Bot Custom Commands
