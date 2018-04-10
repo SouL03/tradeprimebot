@@ -21,7 +21,7 @@ client.on('guildMemberAdd', member => {
                 //"./Welcome Message.png"
             //]
        //}, 'LOL5x')
-       member.message.sendFile("./Welcome Message.png");
+       member.sendFile("./Welcome Message.png");
 });
 
 //Bot Custom Commands
