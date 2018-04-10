@@ -15,10 +15,11 @@ client.on("message", async message => {
     
 });
 
-bot.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
        member.guild.defaultChannel.send(`Benvenuto nel server, ${member}!`);
        member.guild.author.sendMessage('We strunz')
        console.log(`${member.user.username} has joined`);
+});
 
 //Bot Custom Commands
 client.on("message", (message) => {
