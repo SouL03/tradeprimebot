@@ -17,11 +17,12 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', member => {
        //member.guild.defaultChannel.send(`Benvenuto nel server, ${member}!`);
-       member.send(`Testing message.`, {
-  files: [
-    "./Welcome Message.png"
-  ]
-}, 'LOL5x')
+       //member.send(`Testing message.`, {
+            //files: [
+                //"./Welcome Message.png"
+            //]
+       //}, 'LOL5x')
+       member.sendFile("./Welcome Message.png", "Welcome Message.png", "`Sponsorizzato da TradePrime`")
 });
 
 //Bot Custom Commands
