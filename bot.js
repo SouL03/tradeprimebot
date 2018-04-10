@@ -22,14 +22,14 @@ client.on('guildMemberAdd', member => {
             //]
        //}, 'LOL5x')
        member.send({embed: {
-        color: 3447003,
-        title: "Comandi Supportati",
-        image: "./Welcome Message.png",
-        footer: {
-          icon_url: client.user.avatarURL,
-          text: "Sponsorizzato da Trade Prime"
-        }
-    });
+         color: 3447003,
+         title: "Comandi Supportati",
+         image: "./Welcome Message.png",
+         footer: {
+           icon_url: client.user.avatarURL,
+           text: "Sponsorizzato da Trade Prime"
+         }
+       });
 });
 
 //Bot Custom Commands
