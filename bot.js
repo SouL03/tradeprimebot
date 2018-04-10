@@ -23,7 +23,6 @@ client.on('guildMemberAdd', member => {
             //]
        //}, 'LOL5x')
        member.sendFile("./Welcome Message.png");
-       member.sendMessage("`Sponsorizzato da TradePrime`");
 });
 
 //Bot Custom Commands
