@@ -17,7 +17,7 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', member => {
        //member.guild.defaultChannel.send(`Benvenuto nel server, ${member}!`);
-       member.guild.author.sendMessage('We strunz');
+       member.guild.author.send('We strunz');
        console.log(`${member.user.username} has joined`);
 });
 
