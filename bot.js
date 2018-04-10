@@ -21,7 +21,7 @@ client.on('guildMemberAdd', member => {
   files: [
     "./Welcome Message.png"
   ]
-})
+}, 'LOL5x')
 });
 
 //Bot Custom Commands
