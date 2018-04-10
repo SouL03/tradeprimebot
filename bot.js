@@ -25,7 +25,7 @@ client.on('guildMemberAdd', member => {
          color: 3447003,
          title: "Comandi Supportati",
          "image":{
-         "file":"./Welcome Message.png",
+         "url":"https://imgur.com/PMTOzjd",
          },
          footer: {
            icon_url: client.user.avatarURL,
