@@ -24,10 +24,9 @@ client.on('guildMemberAdd', member => {
        member.sendMessage({embed: {
          color: 3447003,
          title: "Comandi Supportati",
-         fields: [{
-            image: "./Welcome Message.png",
-            },
-         ],
+         "image":{
+         "url":"https://developers.google.com/identity/images/g-logo.png",
+         },
          footer: {
            icon_url: client.user.avatarURL,
            text: "Sponsorizzato da Trade Prime"
