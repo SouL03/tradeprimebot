@@ -7,8 +7,25 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-        const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
+    const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const newName = args.join(" ");
+        
+    let Founder = message.guild.roles.find("name","Founder");
+    
+    if(message.member.roles.has(Founder.id) {
+        if(command === 'nick') {
+          if(newName) {
+            client.user.setUsername(newName);
+            message.channel.send('UserName del bot cambiato in ' + newName)
+          } else {
+            message.channel.send('Errore durante l\'esecuzione di tale comando. Controlla la console....');
+          }
+        }
+    } else {
+        message.author.sendMessage("Non hai il permesso di utilizzare questo comando");
+        message.delete();
+    }
     
 });
 
