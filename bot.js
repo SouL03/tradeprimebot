@@ -13,7 +13,7 @@ client.on("message", async message => {
         
     let Founder = message.guild.roles.find("name","Founder");
     
-    if(message.member.roles.has(Founder.id) {
+    if(message.member.roles.has(Founder.id)) {
         if(command === 'nick') {
           if(newName) {
             client.user.setUsername(newName);
