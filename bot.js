@@ -36,8 +36,9 @@ client.on('guildMemberAdd', member => {
                 //"./Welcome Message.png"
             //]
        //}, 'LOL5x')
+       const COLOR_RED = "#760e0d";
        member.sendMessage({embed: {
-         color: 15158332,
+         color: COLOR_RED,
          title: "**Clicca per ingrandire l'immagine**",
          "image":{
            "url":"https://imgur.com/PMTOzjd.png",
