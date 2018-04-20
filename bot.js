@@ -32,12 +32,6 @@ client.on('messageReactionAdd', (reaction, user) => {
             realuser.addRole(PS4);
         }
         
-        if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id) {
-            const SWITCH = msg.guild.roles.find("name","Switch")
-            var realuser = reaction.message.guild.member(user)
-            //user.addRole(user.guild.roles.add("name", "Steam"));
-            realuser.addRole(SWITCH);
-        }
     }
 });
 
