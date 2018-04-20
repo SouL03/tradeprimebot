@@ -11,10 +11,10 @@ client.on('messageReactionAdd', (reaction, user) => {
     if(msg.channel.id === '431147353232244746') {
         //if(reaction.emoji.name === client.emojis.get("431581850457079819")) {
         if (reaction.emoji === client.emojis.get("436916081957797889")) {
-            const Steam = msg.guild.roles.find('name','PC')
+            const PC = msg.guild.roles.find('name','PC')
             var realuser = reaction.message.guild.member(user)
             //user.addRole(user.guild.roles.add("name", "Steam"));
-            realuser.addRole(Steam);
+            realuser.addRole(PC);
         }
     }
 });
