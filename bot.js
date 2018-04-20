@@ -14,10 +14,10 @@ client.on('messageReactionAdd', (reaction, user) => {
         
         
         if (reaction.emoji.name === "✅") {
-            const PC = msg.guild.roles.find('name','PC')
+            const Trust = msg.guild.roles.find('name','Trusted')
             var realuser = reaction.message.guild.member(user)
             //user.addRole(user.guild.roles.add("name", "Steam"));
-            realuser.addRole(PC);
+            realuser.addRole(Trust);
         }
 });
 
