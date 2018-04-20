@@ -24,6 +24,20 @@ client.on('messageReactionAdd', (reaction, user) => {
             //user.addRole(user.guild.roles.add("name", "Steam"));
             realuser.addRole(XBOX);
         }
+        
+        if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id) {
+            const PS4 = msg.guild.roles.find("name","PS4")
+            var realuser = reaction.message.guild.member(user)
+            //user.addRole(user.guild.roles.add("name", "Steam"));
+            realuser.addRole(PS4);
+        }
+        
+        if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id) {
+            const SWITCH = msg.guild.roles.find("name","Switch")
+            var realuser = reaction.message.guild.member(user)
+            //user.addRole(user.guild.roles.add("name", "Steam"));
+            realuser.addRole(SWITCH);
+        }
     }
 });
 
