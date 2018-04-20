@@ -8,7 +8,7 @@ client.on("ready", () => {
 
 client.on('messageReactionAdd', (reaction, user) => {
     const msg = reaction.message;
-    if(msg.channel.id === "431147353232244746" && msg.id === "436931307201757186") {
+    if(msg.channel.id === "431147353232244746" && msg.attachment.id === "436931307201757186") {
         //if(reaction.emoji.name === client.emojis.get("431581850457079819")) {
         //client.emojis.get("436916081957797889")
         if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
