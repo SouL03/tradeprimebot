@@ -10,7 +10,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     const msg = reaction.message;
     //if(reaction.emoji.name === client.emojis.get("431581850457079819")) {
     if (reaction.emoji === client.emojis.get("436916081957797889")) {
-        const Steam = msg.guild.roles.find('name','Steam')
+        const Steam = msg.guild.roles.find("name","Steam")
         var realuser = reaction.message.guild.member(user)
         //user.addRole(user.guild.roles.add("name", "Steam"));
         realuser.addRole(Steam);
