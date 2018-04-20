@@ -8,7 +8,6 @@ client.on("ready", () => {
 
 client.on('messageReactionAdd', (reaction, user) => {
     const msg = reaction.message;
-    if(msg.channel.id === '431147353232244746') {
         //if(reaction.emoji.name === client.emojis.get("431581850457079819")) {
         
         //Funzionale => reaction.emoji === client.emojis.get("436916081957797889"
@@ -20,7 +19,6 @@ client.on('messageReactionAdd', (reaction, user) => {
             //user.addRole(user.guild.roles.add("name", "Steam"));
             realuser.addRole(PC);
         }
-    }
 });
 
 client.on("message", async message => {
