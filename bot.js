@@ -13,11 +13,11 @@ client.on('messageReactionAdd', (reaction, user) => {
         //client.emojis.get("436916081957797889")
         if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
             const PC = msg.guild.roles.find("name","PC")
-            if (!PC) return reaction.message.channel.send("Non è stato possibile trovare il ruolo PC");
-            reaction.message.member.addRole(PC);
-            //var realuser = reaction.message.guild.member(user)
+            //if (!PC) return reaction.message.channel.send("Non è stato possibile trovare il ruolo PC");
+            //reaction.message.member.addRole(PC);
+            var realuser = reaction.message.guild.member(user)
             //user.addRole(user.guild.roles.add("name", "Steam"));
-            //realuser.addRole(PC);
+            realuser.addRole(PC);
         }
     
         if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id) {
