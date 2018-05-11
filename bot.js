@@ -82,6 +82,7 @@ client.on("message", async message => {
     const newName = args.join(" ");
         
     let Founder = message.guild.roles.find("name","Founder");
+    let Moderator = message.guild.roles.find("name","Moderator");
     
     if(command === 'nick') {
           if(message.member.roles.has(Founder.id)) {
@@ -95,6 +96,17 @@ client.on("message", async message => {
               message.author.sendMessage("Non hai il permesso di utilizzare questo comando");
               message.delete();
           }
+    }
+    
+    if(command === 'tpmessage'){
+         if(message.member.roles.has(Founder.id) || message.member.roles.has(Moderator.id)) {
+           const tpmsg = args.join("");
+           message.delete();
+           message.channel.send(`${tpmsg}`);
+         } else {
+           message.delete()
+           message.author.send('Non hai il permesso di utilizzare questo comando.');   
+         }
     }
     
 });
