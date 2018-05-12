@@ -2,12 +2,20 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const cfg = require("./config.json");
 
+
 client.on("ready", () => {
     console.log("I am ready!");
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
     const msg = reaction.message;
+    
+    msg.awaitReactions((reaction, user) => user.id === msg.author.id, {max: 1, time: 60*1000, errors: ['time'] })
+     .then(collected => console.log(`collected anything`)
+     .catch(collected => {
+        console.log(`Done collecting.`);
+    });
+           
     if(msg.channel.id === "431147353232244746") {
 
         if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
