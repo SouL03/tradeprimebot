@@ -2,19 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const cfg = require("./config.json");
 
-
 client.on("ready", () => {
     console.log("I am ready!");
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
     const msg = reaction.message;
-    
-    msg.awaitReactions((reaction, user) => user.id === msg.author.id, {max: 1, time: 60*1000, errors: ['time'] })
-     .then(collected => console.log(`collected anything`)
-     .catch(collected => {
-        console.log(`Done collecting.`);
-     }));
            
     if(msg.channel.id === "431147353232244746") {
 
@@ -88,6 +81,16 @@ client.on("message", async message => {
     const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     const newName = args.join(" ");
+    
+    const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
+
+    let collector = message.createReactionCollector(filter, { time: 5000 });
+    collector.on('collect', (reaction, collector) => {
+        console.log('got a reaction');
+    });
+    collector.on('end', collected => {
+        console.log(`collected ${collected.size} reactions`);
+    });
         
     let Founder = message.guild.roles.find("name","Founder");
     let Moderator = message.guild.roles.find("name","Moderator");
