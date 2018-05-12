@@ -4,6 +4,7 @@ const cfg = require("./config.json");
 
 client.on("ready", () => {
     console.log("I am ready!");
+    client.user.setPresence({ game: { name: 'https://discord.gg/M53KjuE', type: 0 } });
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
