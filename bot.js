@@ -23,7 +23,8 @@ client.on('messageReactionAdd', (reaction, user) => {
                         console.log('Failed to remove a reaction that ' + user.username + ' had put on their own message: ' + error);
                     }
                 );
-		    }
+            }
+	}
     //const msg = reaction.message;
     
     //const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
