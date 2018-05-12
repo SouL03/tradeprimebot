@@ -122,7 +122,7 @@ client.on("message", async message => {
     
     if(command === 'tpmessage'){
          if(message.member.roles.has(Founder.id) || message.member.roles.has(Moderator.id)) {
-           const tpmsg = args.join("");
+           const tpmsg = args.join(" ");
            message.delete();
            message.channel.send(`${tpmsg}`);
          } else {
