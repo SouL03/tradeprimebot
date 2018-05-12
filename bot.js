@@ -14,7 +14,8 @@ client.on('messageReactionAdd', (reaction, user) => {
      .then(collected => console.log(`collected anything`)
      .catch(collected => {
         console.log(`Done collecting.`);
-    });
+     });
+    );
            
     if(msg.channel.id === "431147353232244746") {
 
