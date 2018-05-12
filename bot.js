@@ -8,17 +8,33 @@ client.on("ready", () => {
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
-    const msg = reaction.message;
     
-    const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
+    	if(!reaction.message.author.bot){
+		// If the message and the reaction was both from the same user..
+            if(reaction.message.author.id == user.id){
+                // Remove the reaction from the message.
+                reaction.remove(user).then
+                (
+                    reaction => 
+                    {
+                        console.log('Remove a reaction that ' + user.username + ' had put on their own message.');
+                    }, error => 
+                    {
+                        console.log('Failed to remove a reaction that ' + user.username + ' had put on their own message: ' + error);
+                    }
+                );
+		    }
+    //const msg = reaction.message;
+    
+    //const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
 
-    let collector = msg.createReactionCollector(filter, { time: 5000 });
-    collector.on('collect', (reaction, collector) => {
-        console.log('got a reaction');
-    });
-    collector.on('end', collected => {
-        console.log(`collected ${collected.size} reactions`);
-    });
+    //let collector = msg.createReactionCollector(filter, { time: 5000 });
+    //collector.on('collect', (reaction, collector) => {
+        //console.log('got a reaction');
+    //});
+    //collector.on('end', collected => {
+        //console.log(`collected ${collected.size} reactions`);
+    //});
            
     if(msg.channel.id === "431147353232244746") {
 
@@ -54,17 +70,17 @@ client.on('messageReactionAdd', (reaction, user) => {
 });
 
 client.on('messageReactionRemove', (reaction, user) => {
-    const msg = reaction.message;
+    //const msg = reaction.message;
     
-    const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
+    //const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
 
-    let collector = msg.createReactionCollector(filter, { time: 5000 });
-    collector.on('collect', (reaction, collector) => {
-        console.log('got a reaction');
-    });
-    collector.on('end', collected => {
-        console.log(`collected ${collected.size} reactions`);
-    });
+    //let collector = msg.createReactionCollector(filter, { time: 5000 });
+    //collector.on('collect', (reaction, collector) => {
+        //console.log('got a reaction');
+    //});
+    //collector.on('end', collected => {
+        //console.log(`collected ${collected.size} reactions`);
+    //});
     
     if(msg.channel.id === "431147353232244746") {
 
