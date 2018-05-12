@@ -57,7 +57,7 @@ client.on('messageReactionRemove', (reaction, user) => {
     
     const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
 
-    let collector = message.createReactionCollector(filter, { time: 5000 });
+    let collector = msg.createReactionCollector(filter, { time: 5000 });
     collector.on('collect', (reaction, collector) => {
         console.log('got a reaction');
     });
