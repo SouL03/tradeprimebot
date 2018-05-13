@@ -73,11 +73,11 @@ client.on("message", (message) => {
     
 });
 
-client.on('messageReactionAdd', (reaction, user) => {
+client.on('messageReactionAdd', async (reaction, user) => {
     	
-   const msg = reaction.message
+   const msg = await reaction.message
 
-   msg.channel.fetchMessage('445355156972765187').then(	
+   msg.channel.fetchMessage('445348815260876823').then(	r => {
 	if(msg.channel.id === '431147353232244746'){
 		if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
 		  const PC = msg.guild.roles.find('name','PC')
@@ -85,7 +85,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 		  realuser.addRole(PC);    
 		}
 	}
-   )
+   })
 	
 });
     
