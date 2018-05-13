@@ -12,29 +12,31 @@ client.on('messageReactionAdd', (reaction, user) => {
    const msg = reaction.message
 
    msg.channel.fetchMessage('445348783417458723').then(r => {	
+	   
 	if(msg.channel.id === '431147353232244746'){
+		
 		if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
 		  const PC = msg.guild.roles.find('name','PC')
 		  var realuser = reaction.message.guild.member(user)
 		  realuser.addRole(PC);    
 		}
-        if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id) {
-            const XBOX = msg.guild.roles.find("name","XBOX")
-            var realuser = reaction.message.guild.member(user)
-            realuser.addRole(XBOX);
-        }
+		if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id) {
+		    const XBOX = msg.guild.roles.find("name","XBOX")
+		    var realuser = reaction.message.guild.member(user)
+		    realuser.addRole(XBOX);
+		}
 
-        if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id) {
-            const PS4 = msg.guild.roles.find("name","PS4")
-            var realuser = reaction.message.guild.member(user)
-            realuser.addRole(PS4);
-        }
-        
-        if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id) {
-            const Switch = msg.guild.roles.find("name","Switch")
-            var realuser = reaction.message.guild.member(user)
-            realuser.addRole(Switch);
-        }
+		if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id) {
+		    const PS4 = msg.guild.roles.find("name","PS4")
+		    var realuser = reaction.message.guild.member(user)
+		    realuser.addRole(PS4);
+		}
+
+		if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id) {
+		    const Switch = msg.guild.roles.find("name","Switch")
+		    var realuser = reaction.message.guild.member(user)
+		    realuser.addRole(Switch);
+		}
         
 	 }
    })
