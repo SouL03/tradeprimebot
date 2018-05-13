@@ -85,7 +85,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 		  realuser.addRole(PC);    
 		}
 	}
-   })
+   //})
 	
 });
     
