@@ -8,65 +8,44 @@ client.on("ready", () => {
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
-    
-    const msg = reaction.message;
-    
-    const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
+    	
+   const msg = reaction.message
 
-    let collector = msg.createReactionCollector(filter, { time: 5000 });
-    collector.on('collect', (reaction, collector) => {
-        console.log('got a reaction');
-    });
-    collector.on('end', collected => {
-        console.log(`collected ${collected.size} reactions`);
-    });
-           
-    if(msg.channel.id === "431147353232244746") {
-
-        if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
-            const PC = msg.guild.roles.find('name','PC')
-            var realuser = reaction.message.guild.member(user)
-            realuser.addRole(PC);    
-        }
-
+   msg.channel.fetchMessage('445348783417458723').then(r => {	
+	if(msg.channel.id === '431147353232244746'){
+		if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
+		  const PC = msg.guild.roles.find('name','PC')
+		  var realuser = reaction.message.guild.member(user)
+		  realuser.addRole(PC);    
+		}
         if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id) {
             const XBOX = msg.guild.roles.find("name","XBOX")
             var realuser = reaction.message.guild.member(user)
-            //user.addRole(user.guild.roles.add("name", "Steam"));
             realuser.addRole(XBOX);
         }
 
         if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id) {
             const PS4 = msg.guild.roles.find("name","PS4")
             var realuser = reaction.message.guild.member(user)
-            //user.addRole(user.guild.roles.add("name", "Steam"));
             realuser.addRole(PS4);
         }
         
         if (reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id) {
             const Switch = msg.guild.roles.find("name","Switch")
             var realuser = reaction.message.guild.member(user)
-            //user.addRole(user.guild.roles.add("name", "Steam"));
             realuser.addRole(Switch);
         }
         
-    }
-    
+	 }
+   })
+	
 });
 
-client.on('messageReactionRemove', (reaction, user) => {
-    //const msg = reaction.message;
-    
-    //const filter = (reaction, user) => reaction.emoji.id === reaction.message.guild.emojis.find("name", "ps4").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "switch").id || reaction.emoji.id === reaction.message.guild.emojis.find("name", "xbox").id || reaction.message.guild.emojis.find("name", "steam").id;
 
-    //let collector = msg.createReactionCollector(filter, { time: 5000 });
-    //collector.on('collect', (reaction, collector) => {
-        //console.log('got a reaction');
-    //});
-    //collector.on('end', collected => {
-        //console.log(`collected ${collected.size} reactions`);
-    //});
+client.on('messageReactionRemove', (reaction, user) => {
     
+   const msg = reaction.message
+
     if(msg.channel.id === "431147353232244746") {
 
         if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
