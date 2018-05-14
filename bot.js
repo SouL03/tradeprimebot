@@ -89,9 +89,6 @@ client.on('messageReactionAdd', (reaction, user) => {
    })
 	
 });
-
-	
-});
     
 
  
