@@ -77,9 +77,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     	
    const msg = reaction.message
 
-   msg.channel.fetchMessages({around: "431147353232244746", limit: 1})
-  	.then(messages => {
-    	const fetchedMsg = messages.first(); // messages is a collection!)
+   msg.channel.fetchMessage('445406407857274883').then(r => {	
 	if(msg.channel.id === '431147353232244746'){
 		if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
 		  const PC = msg.guild.roles.find('name','PC')
