@@ -84,8 +84,24 @@ client.on('messageReactionAdd', (reaction, user) => {
 		  var realuser = reaction.message.guild.member(user)
 		  realuser.addRole(PC);    
 		}
+
 	}
    })
+	
+});
+
+client.on('messageReactionRemove', (reaction, user) => {
+    
+   const msg = reaction.message
+
+    if(msg.channel.id === "431147353232244746") {
+
+        if(reaction.emoji.id === reaction.message.guild.emojis.find("name", "steam").id) {
+            const PC = msg.guild.roles.find('name','PC')
+            var realuser = reaction.message.guild.member(user)
+            realuser.removeRole(PC);    
+        }
+    }
 	
 });
     
