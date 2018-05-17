@@ -7,7 +7,21 @@ client.on("ready", () => {
     client.user.setPresence({ game: { name: 'https://discord.gg/M53KjuE', type: 0 } });
 });
 
+const events = {
+    MESSAGE_REACTION_ADD: 'messageReactionAdd',
+    MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
+};
 
+client.on('raw', async event => {
+    if (!events.hasOwnProperty(event.t)) return;
+	const { d: data } = event;
+	const user = client.users.get(data.user_id);
+	const channel = client.channels.get(data.channel_id) || await user.createDM();
+
+	if (channel.messages.has(data.message_id)) return;
+
+	const message = await channel.fetchMessage(data.message_id);
+});
 
 client.on("message", async message => {
     const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
